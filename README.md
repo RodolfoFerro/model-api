@@ -6,7 +6,6 @@ Este es el repositorio oficial del bloque de despliegue de modelos para el módu
 
 - Presentación: [https://github.com/RodolfoFerro/modulo-deep-learning](https://github.com/RodolfoFerro/modulo-deep-learning)
 - Cuaderno de entrenamiento: [/notebooks](/notebooks)
-- Carpeta con código para la API: [/api](/api)
 - Código de la API: [/app.py](/app.py)
 
 
