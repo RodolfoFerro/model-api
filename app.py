@@ -23,7 +23,7 @@ app = Flask(__name__)
 # Globals
 VERSION = 'v0.0'
 BASE_URL = f'/api/{VERSION}/'
-SPECIES = {'0': 'I. setosa', '1': 'I. versicolor', '2': 'I. virginica'}
+SPECIES = {0: 'I. setosa', 1: 'I. versicolor', 2: 'I. virginica'}
 
 # Load trained model
 MODEL_PATH = "models/iris-model.keras"
