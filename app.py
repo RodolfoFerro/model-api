@@ -26,8 +26,8 @@ BASE_URL = f'/api/{VERSION}/'
 SPECIES = {0: 'I. setosa', 1: 'I. versicolor', 2: 'I. virginica'}
 
 # Load trained model
-MODEL_PATH = "models/iris-model.keras"
-model = tf.keras.models.load_model(MODEL_PATH)
+MODEL_PATH = ""
+model = None # TODO: Load model using tf
 
 
 # API Routes
@@ -51,29 +51,22 @@ def predict():
     # Get data from JSON object in POST method
     req_data = request.get_json()
 
-    # Parse data from JSON input
-    sl = req_data['sepal_length']
-    sw = req_data['sepal_width']
-    pl = req_data['petal_length']
-    pw = req_data['petal_width']
+    # TODO: Parse data from JSON input
+    sl = None # Get 'sepal_length' from req_data
+    sw = None # Get 'sepal_width' from req_data
+    pl = None # Get 'petal_length' from req_data
+    pw = None # Get 'petal_width' from req_data
 
     # Perform inference
-    input_data = np.array([[sl, sw, pl, pw]])
-    prediction = model.predict(input_data)
-    label = np.argmax(prediction)
+    input_data = None # TODO: Prepare data (np.array)
+    prediction = None # TODO: Perform inference using model
+    label = None # TODO: Get argmax of prediction
+
     class_name = SPECIES[label]
     print(f'[INFO] Predicted class: {class_name}')
 
-    # Build output message
-    message = {"response": [
-        {"input": {
-            'sepal_length': sl,
-            'sepal_width': sw,
-            'petal_length': pl,
-            'petal_width': pw
-        }},
-        {"prediction": int(label)},
-        {"species": str(class_name)}]}
+    # TODO: Build output message
+    message = {}
 
     return jsonify(message)
 
